@@ -1,0 +1,117 @@
+<html>
+
+<head>
+    <title>Lab1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<!-- ASSIGNEMENT:
+1. Write down the JavaScript that shows the different variable types. 
+2. Write down the JavaScript that demonstrates the use of +=, -=, *=, /= operators.
+3. Create a Form in HTML with two fields, minimum and maximum, write JavaScript to validate that only numeric value is entered in both, and the value entered in minimum is less than the value entered in maximum.
+4. Write a JavaScript that finds out multiples of 10 in 0 to 10000. On the click of button start the timer and stop the counter after 10 seconds. Display on the screen how many multiples of 10 are found out within stipulated time.
+5. Write a JavaScript to generate two random numbers and find out maximum and minimum out of it.
+6. Write a JavaScript to remove the highest element from the array and arrange the array in ascending order.
+7. Write a JavaScript to convert Celsius to Fahrenheit.
+8. Write a JavaScript to find a string from the given text. If the match is found then replace it with another string -->
+</body>
+<script>
+    // 1. Write down the JavaScript that shows the different variable types. 
+    var a = 10;
+    var b = "Hello";
+    var c = true;
+    var d = [1, 2, 3, 4, 5];
+    var e = {
+        name: "John",
+        age: 30,
+        city: "New York"
+    };
+    var f = function() {
+        return "Hello World";
+    };
+    var g = null;
+    var h = undefined;
+    var i = new Date();
+    var j = new RegExp("\\d");
+    var k = new Error("Error");
+    var l = Symbol("symbol");
+    var m = new Set();
+    var n = new Map();
+    // 2. Write down the JavaScript that demonstrates the use of +=, -=, *=, /= operators.
+    var x = 10;
+    x += 5;
+    x -= 5;
+    x *= 5;
+    x /= 5;
+    // 3. Create a Form in HTML with two fields, minimum and maximum, write JavaScript to validate that only numeric value is entered in both, and the value entered in minimum is less than the value entered in maximum.
+    function validateForm() {
+        var min = document.forms["myForm"]["min"].value;
+        var max = document.forms["myForm"]["max"].value;
+        if (isNaN(min) || isNaN(max)) {
+            alert("Please enter numeric value");
+            return false;
+        }
+        if (min > max) {
+            alert("Minimum value should be less than maximum value");
+            return false;
+        }
+    }
+    // 4. Write a JavaScript that finds out multiples of 10 in 0 to 10000. On the click of button start the timer and stop the counter after 10 seconds. Display on the screen how many multiples of 10 are found out within stipulated time.
+    var count = 0;
+    var timer = setInterval(function() {
+        for (var i = 0; i <= 10000; i++) {
+            if (i % 10 === 0) {
+                count++;
+            }
+        }
+        document.getElementById("result").innerHTML = count;
+        clearInterval(timer);
+    }, 10000);
+    // 5. Write a JavaScript to generate two random numbers and find out maximum and minimum out of it.
+    var num1 = Math.floor(Math.random() * 100);
+    var num2 = Math.floor(Math.random() * 100);
+    var max = Math.max(num1, num2);
+    var min = Math.min(num1, num2);
+    // 6. Write a JavaScript to remove the highest element from the array and arrange the array in ascending order.
+    var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    var max = Math.max.apply(null, arr);
+    var index = arr.indexOf(max);
+    if (index > -1) {
+        arr.splice(index, 1);
+    }
+    arr.sort(function(a, b) {
+        return a - b;
+    });
+    // 7. Write a JavaScript to convert Celsius to Fahrenheit.
+    var celsius = 37;
+    var fahrenheit = (celsius * 9 / 5) + 32;
+    // 8. Write a JavaScript to find a string from the given text. If the match is found then replace it with another string
+    var str = "Hello World";
+    var res = str.replace("Hello", "Hi");
+</script>
+
+<body>
+    // test this nine questions
+    <form name="myForm" action="" onsubmit="return validateForm()" method="post">
+        <label for="min">Minimum</label>
+        <input type="text" name="min" id="min">
+        <label for="max">Maximum</label>
+        <input type="text" name="max" id="max">
+        <input type="submit" value="Submit">
+    </form>
+    <button id="btn">Start</button>
+    <p id="result"></p>
+    <p>Random Number 1: {{num1}}</p>
+    <p>Random Number 2: {{num2}}</p>
+    <p>Maximum: {{max}}</p>
+    <p>Minimum: {{min}}</p>
+    <p>Array: {{arr}}</p>
+    <p>Celsius: {{celsius}}</p>
+    <p>Fahrenheit: {{fahrenheit}}</p>
+    <p>String: {{res}}</p>
+
+</body>
+
+</html>

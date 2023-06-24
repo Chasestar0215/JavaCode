@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Lab8</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form name="login" action="/Lab8/validate">
+            <div align="center">
+                <h1 style="color: red">Enter your inform</h1>
+                <p>User Name =<input type="text" name="txtName" id="txtName" value=""></p>
+                <p>Pass Word =<input type="text" name="txtPwd" id="txtPwd" value=""></p>
+                <input type="submit" name="Btnsubmit" id="Btnsubmit" value="Login">
+            </div>
+        </form>
+        
+        <form name="testRedirect" action="/Lab8/sendRedirect" method="post">
+            <label>Enter search data:</label>
+            <input type="text" name="txtSearch" id="txtSearch"/>
+            <input type="submit" name="Btnsubmit" value="Search"/>
+        </form>
+    </body>
+</html>

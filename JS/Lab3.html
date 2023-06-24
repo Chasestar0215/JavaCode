@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <title>Lab3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+</body>
+
+<!-- // 2. Write down the code to define how to use insert Java Script and external JavaScript on the HTML page.  -->
+<script>
+    alert("Hello world!");
+</script>
+<script src="script.js"></script>
+
+<script>
+    // 1. Write down the code to display the “Hello world!” message using JavaScript. 
+    alert("Hello world!");
+
+
+    // 3. Write down the code to declare the global variable and local variable using JavaScript. 
+    var global = "global";
+
+    function test() {
+        var local = "local";
+    }
+    // 4. Write down the code to define three types of object declaration using JavaScript. 
+    var obj1 = new Object();
+    var obj2 = {};
+    var obj3 = {
+        name: "John",
+        age: 30,
+        city: "New York"
+    };
+    // 5. Write down the code to define four types of array declaration using JavaScript. 
+    var arr1 = new Array();
+    var arr2 = [];
+    var arr3 = [1, 2, 3, 4, 5];
+    var arr4 = new Array(1, 2, 3, 4, 5);
+    // 6. Write down the code of the simple event handler, to enter the name in the text box and print the name in an alert box. 
+    function myFunction() {
+        var x = document.getElementById("myText").value;
+        alert(x);
+    }
+    // 7. Write down the code to use all the Event handlers on one web page. 
+    function myFunction() {
+        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+    }
+
+    function myFunction() {
+        document.getElementById("demo").style.fontSize = "25px";
+    }
+
+    function myFunction() {
+        document.getElementById("demo").style.color = "red";
+    }
+
+    // 8. Write down the code to use all the windows object methods on one web page.
+    function myFunction() {
+        window.open("https://cn.bing.com/");
+    }
+
+    function myFunction() {
+        window.close();
+    }
+
+    function myFunction() {
+        window.moveTo(0, 0);
+    }
+
+    function myFunction() {
+        window.resizeTo(500, 500);
+    }
+
+    function myFunction() {
+        window.resizeBy(100, 100);
+    }
+
+    function myFunction() {
+        window.scrollBy(0, 100);
+    }
+
+    function myFunction() {
+        window.scrollTo(0, 100);
+    }
+
+    function myFunction() {
+        window.alert("Hello");
+    }
+</script>
+
+</html>

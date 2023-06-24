@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>购物车</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>购物车</h1>
+        <form action="Shopping.jsp" method="post">
+            <p>
+                <label>商品名:</label>
+                <input type="text" name="name" required>
+            </p>
+            <p>
+                <label>价格:</label>
+                <input type="number" name="price" min="0" required>
+            </p>
+            <button type="submit">添加到购物车</button>
+        </form>
+    </body>
+</html>
